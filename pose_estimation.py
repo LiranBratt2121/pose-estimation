@@ -17,7 +17,6 @@ while True:
     img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     results = pos.process(img_rgb)
     
-
     c_time = time()
     fps = 1 / (c_time - p_time)
     p_time = c_time
