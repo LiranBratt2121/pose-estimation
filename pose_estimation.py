@@ -28,12 +28,11 @@ while True:
 
         for id, lm in enumerate(results.pose_landmarks.landmark):
             h, w, c = img.shape
-            
-            h, w, c = img.shape
 
             cx, cy = int(lm.x * w), int(lm.y * h)
             
             cv2.circle(img, (cx, cy), 5, (255, 0, 0), cv2.FILLED)
+            
             print(id, cx, cy)
             
     cv2.imshow('Image', img)
